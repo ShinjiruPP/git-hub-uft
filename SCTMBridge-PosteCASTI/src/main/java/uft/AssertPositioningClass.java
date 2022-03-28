@@ -1,4 +1,4 @@
-package perfecto;
+package uft;
 
 public class AssertPositioningClass {
 	

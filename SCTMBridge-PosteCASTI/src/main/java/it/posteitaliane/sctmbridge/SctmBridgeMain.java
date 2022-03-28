@@ -9,7 +9,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 //import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 
-import perfecto.SwitchToPerfecto;
 
 @SpringBootApplication
 public class SctmBridgeMain {
@@ -25,11 +24,9 @@ public class SctmBridgeMain {
 			if(Boolean.parseBoolean(isSCTM.toLowerCase())) {context = SpringApplication.run(SctmBridgeMain.class, args);}
 			
 			switch(automationAppName.toUpperCase()) {
-				case "PERFECTO":
-					SwitchToPerfecto.executeSwitchToPerfecto(myPropertiesFile, context);
-					break;
 				case "UFT":
-					//add some code lines
+					//download the report from UFT/Jenkins
+					//Parse the report related to InserResultClass for insert the data on TA_LOG
 					break;
 			}
 		}catch(Exception e) {
